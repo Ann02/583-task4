@@ -1,14 +1,14 @@
 function calcRectangleArea(width, height){
     let s = width * height;
-    if (width <= 0 && height <= 0 ) {
-        throw new Error("Number must be positive");
+    if (width <= 0 || height <= 0 ) {
+        throw 'Number must be positive';
     }
+    return s;
 }
     debugger;
 try {
-    console.log('It is good');
-} catch (error) {
-    console.log('It is bad');
+    //calcRectangleArea(-2,3);
+    //calcRectangleArea(2,3);
+} catch (e) {
+    console.error(e)
 }
-//calcRectangleArea(-2,3)
-//calcRectangleArea(2,3)
