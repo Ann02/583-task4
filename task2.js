@@ -1,20 +1,15 @@
-function checkAge(){
-    let age = prompt('How old are you');
-    if (isNaN(age) || age == NaN) {
-        alert('The field is empty! Please enter your age');
-    }else( age < 14 );{
-        alert('You are underage!');
-    }
-    return age;
+function checkAge() {
+  let age = prompt("Enter your age");
+  if (age == "" || isNaN(age) == true || +age < 14) {
+    throw new Error("Your age is not correct Please enter your age");
+  }
+  document.write("Your film:");
 }
-try{       
-    let result = checkAge();
-    console.log(result);
+
+try {
+  checkAge();
 } catch (error) {
-    console.log(error.name);
-    console.log(error.message);
-    console.log(error.stack);
+  alert(error.name + "! " + error.message);
+}
 
-    }
 
-checkAge();
